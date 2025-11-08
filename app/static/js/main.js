@@ -30,10 +30,10 @@
         });
     });
 
-    // load Data Cloud Web SDK
-    loadScript('https://cdn.c360a.salesforce.com/beacon/c360a/cd2955f2-fc5e-4fa8-a76e-6989c641dfb0/scripts/c360a.min.js', function() {
-        console.log('Data Cloud Web SDK has been loaded.'); 
-    });
+    // load Data 360 Web SDK
+    // loadScript('insertBeaconURL', function() {
+    //     console.log('Data 360 Web SDK has been loaded.'); 
+    // });
 
     // Load slick js for Carousels 
         loadScript("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js", function() {
@@ -334,7 +334,7 @@ function init() {
                             <div class="line-item-promo item-${uuid}"></div>
                         </div>
                         <div class="product-edit product-move">
-                            <a href="https://d1xwwsagkcyxci.cloudfront.net/store/Sites-NTOSFRA-Site/en_US/Cart-GetProduct?uuid=${uuid}" class="edit" data-toggle="modal" data-target="#editProductModal" aria-label="Edit product ${product.name}" title="Edit">Edit</a>
+                            <a href="https://nto-assets.s3.us-west-1.amazonaws.com/store/Sites-NTOSFRA-Site/en_US/Cart-GetProduct?uuid=${uuid}" class="edit" data-toggle="modal" data-target="#editProductModal" aria-label="Edit product ${product.name}" title="Edit">Edit</a>
                             <a href="../en_US/addtowishlist" class="move" data-pid="${product.id}" data-name="${product.name}" data-action="/on/demandware.store/Sites-NTOSFRA-Site/en_US/Cart-RemoveProductLineItem" data-uuid="${uuid}" title="Move to Wishlist">Move to Wishlist</a>
                             <a href="../en_US/cart.html" class="remove-btn-lg remove-product" data-pid="${product.id}" data-action="/on/demandware.store/Sites-NTOSFRA-Site/en_US/Cart-RemoveProductLineItem" data-uuid="${uuid}" aria-label="Remove product ${product.name}" title="Remove">
                                 Remove
@@ -596,7 +596,7 @@ function checkAndRemoveLoader() {
         } else { 
             $('html').removeClass("veiled");
             $('.veil').remove();
-            $.get('https://d1xwwsagkcyxci.cloudfront.net/store/Sites-NTOSFRA-Site/en_US/Cart-MiniCartShow.html', function(data) {
+            $.get('https://nto-assets.s3.us-west-1.amazonaws.com/store/Sites-NTOSFRA-Site/en_US/Cart-MiniCartShow.html', function(data) {
                 $('.minicart-container').html(data);
                 $('.minicart-container').addClass('open');
             });

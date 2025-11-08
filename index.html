@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="refresh" content="0; url=app/en_US/homepage.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Redirecting…</title>
+  <script>
+    (function () {
+      var target = "app/en_US/homepage.html";
+      var query = window.location.search || "";
+      var hash = window.location.hash || "";
+      var url = target + query + hash;
+      // Avoid adding this page to history
+      window.location.replace(url);
+    })();
+  </script>
+</head>
+<body>
+  <noscript>
+    <p>Redirecting to <a href="app/en_US/homepage.html">app/en_US/homepage.html</a>…</p>
+  </noscript>
+</body>
+</html>
