@@ -20,8 +20,8 @@ You can easily deploy this site to **GitHub Pages** or host it elsewhere if you 
 ## About This Project
 
 This project is designed to:
-- Demonstrate client-side simulated eCommerce experience  
-- Provide base website for integrating Agentforce and Data 360. 
+- Demonstrate a client-side simulated ecommerce experience.
+- Provide base website for integrating Agentforce Marketing and Data 360. 
 
 ## Custom Hosting
 
