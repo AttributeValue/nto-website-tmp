@@ -44,7 +44,7 @@
 
 
 let currentPage = window.location.pathname;
-let cfProxy = 'nto-proxy.eliot.workers.dev';
+//let cfProxy = 'nto-proxy.eliot.workers.dev';
 let productColor, productImage, productSize, productUrl ;
 
 function init() {
@@ -59,23 +59,23 @@ function init() {
         }
     });
 
-    // repoint all image sources
+    /* repoint all image sources
     $('img').each(function() {
         var imgSrc = $(this).attr('src');
         if (imgSrc.includes('/on/demandware.static/-/Sites-nto-apparel/default/')) {
             var updatedSrc = 'https://' + cfProxy + imgSrc.replaceAll('../on', '/on');
             $(this).attr('src', updatedSrc);
         }
-    });
+    }); */
 
-    // report all /Product-Variation to cloudflare proxy in data-url
+    /* report all /Product-Variation to cloudflare proxy in data-url
     $('*[data-url]').each(function(){
         var url = $(this).attr('data-url');
         if(url.includes('https://www.northerntrailoutfitters.com/on/demandware.store/Sites-NTOSFRA-Site/en_US/Product-Variation')) {
             var updatedUrl = url.replace('www.northerntrailoutfitters.com', cfProxy);
             $(this).attr('data-url', updatedUrl);
         }
-    });
+    }); */
 
     // Remove all cart-MiniCartShow.html -- todo remove event listners on this cart.
     $('.minicart').removeAttr('data-action-url');
@@ -374,8 +374,8 @@ function init() {
     if (currentPage.endsWith('checkout.html')) {
         // Continue As Guest
         console.log('Checkout page');
-        $('.logo').attr('src','https://'+cfProxy+'/on/demandware.static/Sites-NTOSFRA-Site/-/default/dw37b11b7f/images/logo.svg');
-        $('.logo-alt').attr('src','https://'+cfProxy+'/on/demandware.static/Sites-NTOSFRA-Site/-/default/dw37b11b7f/images/logo.svg');
+        //$('.logo').attr('src','https://'+cfProxy+'/on/demandware.static/Sites-NTOSFRA-Site/-/default/dw37b11b7f/images/logo.svg');
+        //$('.logo-alt').attr('src','https://'+cfProxy+'/on/demandware.static/Sites-NTOSFRA-Site/-/default/dw37b11b7f/images/logo.svg');
         
         $('.card.ghost.customer').hide();
         $('.card.customer-summary').hide();
